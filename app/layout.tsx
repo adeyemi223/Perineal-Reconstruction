@@ -1,16 +1,17 @@
 import "./globals.css";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Lexend, Cormorant_Garamond } from "next/font/google";
+import { Lexend, Playfair_Display } from "next/font/google";
 
 const lexend = Lexend({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
 });
 
-const cormorant_garamond = Cormorant_Garamond({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["500"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
@@ -58,9 +59,9 @@ export default function RootLayout({
           </nav>
         </header>
         <main>{children}</main>
-        <footer>
+        {/* <footer>
           <h1>footer</h1>
-        </footer>
+        </footer> */}
       </body>
     </html>
   );
