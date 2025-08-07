@@ -1,3 +1,6 @@
+/* google font */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 /* Box sizing rules */
 *,
 *::before,
@@ -75,17 +78,24 @@ select {
 }
 
 :root {
-  --nav-fs: 0.8rem;
+  /* width && padding */
+  --max-width: 1440px;
+  --padding: 1em;
+
+  --nav-fs: 0.9rem;
   --nav-fw: 500;
   --fs-800: 2.6rem;
   --fs-700: 1.5rem;
   --fs-600: 1.2rem;
   --fs-500: 1.125rem;
+  --font-family: "Playfair Display", serif;
 
   /* color */
   --text-color: #000000;
   --btn-color: #ffffff;
   --bg-color: #133431;
+
+  --story-bg-color: #f6f6f6;
 }
 
 #Header {
@@ -94,7 +104,7 @@ select {
 
   width: min(var(--max-width), 100%);
   margin-inline: auto;
-  padding-right: 1.5em;
+  padding-right: 3.5em;
 
   display: flex;
   align-items: center;
@@ -110,12 +120,12 @@ select {
 
 .logo {
   background-color: var(--bg-color);
-  padding: 0.6em 1.5em;
+  padding: 0.8em 2.5em;
 }
 
 .navigations {
   display: flex;
-  gap: 2.5em;
+  gap: 4.5em;
 }
 
 .nav_links {
@@ -160,11 +170,193 @@ select {
   padding: 1.5em;
   display: flex;
   align-items: center;
-  gap: 5em;
+  gap: 2em;
 }
 
-.home_context h3 {
+.home_header,
+.home_p {
+  flex-basis: 100%;
+}
+
+.home_header h3 {
+  font-size: var(--fs-800);
+  line-height: 1.1;
+  font-weight: var(--nav-fw);
+  font-family: "Playfair Display", serif;
+}
+
+.story_even_container {
+  --max-width: 100%;
+  /* --padding: 1em; */
+
+  width: min(var(--max-width), 100%);
+  padding-left: 6em;
+  padding-top: 4em;
+}
+
+.Our_story_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.story_text {
+  max-width: 60.481rem;
+  display: flex;
+  flex-basis: 70%;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.story_text::before {
+  content: " ";
+  width: 60%;
+  height: 100%;
+  background: #ffffff;
+  position: absolute;
+  left: 55%;
+  background-image: url("/our_story.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.story_content {
+  z-index: 1;
+}
+
+.story_text h3 {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
-  font-family: var(--font-playfair), serif;
+  font-family: "Playfair Display", serif;
+  padding-block: 0.6em;
+}
+
+.story_text p {
+  max-width: 38.481rem;
+  padding-block: 1em;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.button {
+  padding: 0.75em 2em;
+  border: 2px solid var(--bg-color);
+  color: var(--bg-color);
+  font-weight: var(--nav-fw);
+  background: transparent;
+}
+
+.button:hover {
+  background-color: var(--bg-color);
+  transition: all 0.3s ease;
+  color: var(--btn-color);
+  cursor: pointer;
+}
+
+.story_image {
+  flex-basis: 40%;
+}
+
+.story_image img {
+  width: 100%;
+  max-height: 37.5rem;
+}
+
+.even_container {
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+  padding-block: 3em;
+}
+
+.services_bg_color {
+  background-color: var(--story-bg-color);
+}
+
+.our_services h3 {
+  font-size: var(--fs-800);
+  font-weight: var(--nav-fw);
+  font-family: var(--font-family);
+  padding-bottom: 0.3em;
+}
+
+.faq {
+  border-bottom: 2px solid #00000041;
+  cursor: pointer;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.question_number {
+  display: flex;
+  gap: 2em;
+  font-size: var(--fs-700);
+  font-weight: var(--nav-fw);
+  font-family: var(--font-family);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  padding-inline: 4.5em;
+  line-height: 1.5;
+}
+
+.answer p {
+  padding-block: 1em;
+}
+
+.faq img {
+  background-color: var(--bg-color);
+  padding: 0.5em;
+  border-radius: 100vmax;
+}
+
+.faq.active .answer {
+  max-height: 400px;
+  animation: fade 1s ease-in-out;
+}
+
+.faq.active img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.our_work {
+  display: flex;
+  justify-content: space-between;
+}
+
+.our_work h3 {
+  font-size: var(--fs-800);
+  font-weight: var(--nav-fw);
+  font-family: var(--font-family);
+}
+
+.project_link {
+  font-size: var(--fs-600);
+  color: var(--bg-color);
+  text-decoration: none;
+  font-family: var(--font-family);
+}
+
+.project_link:hover {
+  text-decoration: underline;
+  transition: all 0.3s ease;
 }
