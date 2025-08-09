@@ -1,11 +1,10 @@
 "use client";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+
+import { useRef, useLayoutEffect, useEffect } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import styles from "./HorizontalScroll.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
-
 const images = [
   { src: "/scrollImage1.jpg", caption: "Highway roads Developments" },
   { src: "/scrollImage2.jpg", caption: "Pineri Buildings" },
@@ -22,45 +21,71 @@ const images = [
 ];
 
 export default function HorizontalScroll() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if (typeof window === "undefined") return;
+
     const section = sectionRef.current;
     const container = containerRef.current;
-
     if (!section || !container) return;
 
-    const totalScrollWidth = container.scrollWidth;
-    const viewportWidth = window.innerWidth;
+    const ctx = gsap.context(() => {
+      const getDistance = () =>
+        Math.max(0, container.scrollWidth - section.clientWidth);
 
-    gsap.to(container, {
-      x: () => `-${totalScrollWidth - viewportWidth}px`,
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${totalScrollWidth - viewportWidth}`,
-        pin: true,
-        scrub: 1,
-      },
-    });
+      const tween = gsap.to(container, {
+        x: () => `-${getDistance()}`,
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => `+=${getDistance()}`, // ← backticks!
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        },
+      });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      const onResize = () => ScrollTrigger.refresh();
+      window.addEventListener("resize", onResize);
+
+      return () => {
+        window.removeEventListener("resize", onResize);
+        tween.kill();
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    }, section);
+
+    return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    const imgs = containerRef.current?.querySelectorAll("img") ?? [];
+    let remaining = imgs.length;
+    if (!remaining) return;
+    const onLoad = () => {
+      remaining -= 1;
+      if (remaining === 0) ScrollTrigger.refresh();
     };
+    imgs.forEach((img) => {
+      if (img.complete) onLoad();
+      else img.addEventListener("load", onLoad, { once: true });
+    });
+    return () => imgs.forEach((img) => img.removeEventListener("load", onLoad));
   }, []);
 
   return (
-    <div className="section" ref={sectionRef}>
+    <section className="section" ref={sectionRef}>
       <div className="container" ref={containerRef}>
-        {images.map((image, index) => (
-          <div className="item" key={index}>
+        {images.map((image, i) => (
+          <div className="item" key={i}>
             <img src={image.src} alt={image.caption} />
             <p>{image.caption}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
