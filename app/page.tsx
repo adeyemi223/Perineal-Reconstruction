@@ -72,7 +72,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <HorizontalScroll /> */}
+      <HorizontalScroll />
       <section>
         <div className="even_container">
           <div className="why_us">

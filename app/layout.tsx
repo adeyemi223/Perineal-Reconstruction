@@ -25,11 +25,50 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lexend.className}>
-       <Navbar/>
+        <Navbar />
         <main>{children}</main>
-        {/* <footer>
-          <h1>footer</h1>
-        </footer> */}
+        <footer className="footer">
+          <div className="footer_backgroud">
+            <div className="footer_margin_aauto">
+              <div className="footer_logo">
+                <img src="/logo.svg" alt="" />
+              </div>
+              <div className="footer_navigation">
+                <div className="footer_page_links">
+                  <Link className="footer_link" href="/about">
+                    About
+                  </Link>
+                  <Link className="footer_link" href="/projects">
+                    Project
+                  </Link>
+                  <Link className="footer_link" href="/services">
+                    Services
+                  </Link>
+                  <Link className="footer_link" href="/contact">
+                    Contact
+                  </Link>
+                </div>
+                <div className="footer_info">
+                  <p>info@orionconstruct.com</p>
+                  <p>+1 234 5678 999</p>
+                  <p>North Zone, Colambia.</p>
+                </div>
+                <div className="footer_scocial_links">
+                  <p>Facebook</p>
+                  <p>Instagram</p>
+                  <p>Pinterest</p>
+                  <p>Youtube</p>
+                </div>
+              </div>
+              <div className="copy_right">
+                <p>
+                  &copy; All rights reserved to Perineal Reconstruction |
+                  Privacy | Terms & conditions | Licenses
+                </p>
+              </div>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );

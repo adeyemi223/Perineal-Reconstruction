@@ -98,6 +98,8 @@ select {
   --story-bg-color: #f6f6f6;
 }
 
+/*=====================navlinks========================  */
+
 #Header {
   --max-width: 100%;
   /* --padding: 1em; */
@@ -151,6 +153,7 @@ select {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+/* =====================header_bg================= */
 
 .home {
   height: 100vh;
@@ -184,6 +187,8 @@ select {
   font-weight: var(--nav-fw);
   font-family: "Playfair Display", serif;
 }
+
+/* ======================story==================== */
 
 .story_even_container {
   --max-width: 100%;
@@ -281,6 +286,7 @@ select {
   padding-bottom: 0.3em;
 }
 
+/* ======================faqs==================== */
 .faq {
   border-bottom: 2px solid #00000041;
   cursor: pointer;
@@ -362,36 +368,40 @@ select {
   transition: all 0.3s ease;
 }
 
-.horizontal-section {
+/*=============== horizontal scrool section=============== */
+.section {
   position: relative;
-  width: 100%;
-  padding-left: 9em;
-  /* overflow: auto; */
-}
-
-.horizontal-inner {
-  position: sticky;
-  top: 0;
   height: 100vh;
+  overflow: hidden;
+  padding-left: 8em;
+}
+
+.container {
   display: flex;
-  align-items: flex-start;
-  will-change: transform;
+  height: 100%;
 }
 
-.horizontal-item {
+.item {
   flex: 0 0 auto;
-  width: 480px;
-  height: 579px;
+  width: 400px;
+  height: 550px;
   margin-right: 20px;
-  /* text-align: center; */
 }
 
-.horizontal-item img {
+.item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+.item p {
+  margin-top: 8px;
+  font-size: var(--fs-600);
+  font-weight: var(--nav-fw);
+  font-family: var(--font-family);
+}
+
+/* ===================why us ==================*/
 .why_us h3 {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
@@ -445,6 +455,8 @@ select {
   font-weight: 300;
 }
 
+/* ======================explore==================== */
+
 .explore_grid {
   background-color: var(--bg-color);
   display: grid;
@@ -488,8 +500,8 @@ select {
 
 .explore_image_grid {
   display: grid;
-  grid-template-columns: repeat(2, 0.5fr);
-  column-gap: 1em;
+  grid-template-columns: repeat(2, 1fr);
+  /* column-gap: 1em; */
 }
 
 .explore_image_grid img {
@@ -498,7 +510,7 @@ select {
 }
 
 .first_image {
-  transform: translateY(-30px) scale(1.1);
+  transform: translateY(-30px) scale(1);
 }
 
 .secound_image {
@@ -506,12 +518,14 @@ select {
 }
 
 .third_image {
-  transform: translateY(35px) scale(1);
+  transform: translateY(38px) scale(0.9);
 }
 
 .forth_image {
-  transform: translate(25px, 40px) scale(1.1);
+  transform: translate(18px, 30px) scale(1);
 }
+
+/* ===================testimonials=================== */
 
 .testimonial_bg {
   background-image: url("/testimonial.svg");
@@ -565,6 +579,7 @@ select {
   justify-content: center;
   gap: 18px;
 }
+
 .next {
   background: transparent;
   border: none;
@@ -588,4 +603,58 @@ select {
 
 .dot-active {
   background: #111;
+}
+
+/* =================footer================== */
+
+.footer {
+  padding-top: 3em;
+  background-image: url("/footer_img.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.footer_backgroud {
+  max-width: 1008px;
+  background-color: var(--bg-color);
+}
+
+.footer_margin_aauto {
+  --max-width: 849px;
+  --padding: 1em;
+
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+  padding-block: 2em;
+}
+
+.footer_navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 2.5em;
+}
+
+.footer_page_links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.footer_link {
+  color: var(--btn-color);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.footer_info p,
+.footer_scocial_links p,
+.copy_right {
+  padding-bottom: 0.5em;
+  color: var(--btn-color);
+  font-weight: 300;
 }
