@@ -12,16 +12,16 @@ export default function Navbar() {
         </Link>
 
         <nav className="navigations">
-          <Link className="nav_links" href="/about">
-            About
+          <Link className="nav_links" href="/">
+            About PNL
           </Link>
-          <Link className="nav_links" href="/projects">
+          <Link className="nav_links" href="/">
             Project
           </Link>
-          <Link className="nav_links" href="/services">
+          <Link className="nav_links" href="/">
             Services
           </Link>
-          <Link className="nav_links" href="/contact">
+          <Link className="nav_links" href="/">
             Contact
           </Link>
         </nav>

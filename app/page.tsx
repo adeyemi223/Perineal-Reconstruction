@@ -63,10 +63,10 @@ export default function Home() {
       <FaqSection />
 
       <section>
-        <div className="even_container">
+        <div className="our_work_padding_block">
           <div className="our_work">
             <h3>Our Work</h3>
-            <Link href="/projects" className="project_link">
+            <Link href="/" className="project_link">
               VIEW ALL PROJECTS
             </Link>
           </div>

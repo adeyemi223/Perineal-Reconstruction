@@ -82,7 +82,7 @@ select {
   --max-width: 1209px;
   --padding: 1em;
 
-  --nav-fs: 0.9rem;
+  --nav-fs: 0.788rem;
   --nav-fw: 500;
   --fs-800: 2.6rem;
   --fs-700: 1.5rem;
@@ -132,6 +132,7 @@ select {
 
 .nav_links {
   text-decoration: none;
+  text-transform: uppercase;
   font-size: var(--nav-fs);
   font-weight: var(--nav-fw);
   color: var(--text-color);
@@ -165,6 +166,7 @@ select {
 }
 
 .home_context {
+  width: 100%;
   max-width: 57.938rem;
   background-color: var(--btn-color);
   position: absolute;
@@ -346,8 +348,16 @@ select {
   }
 }
 
+.our_work_padding_block {
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+  padding-top: 3em;
+  margin-bottom: 2rem;
+}
+
 .our_work {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -377,15 +387,17 @@ select {
 }
 
 .container {
+  padding-top: 1em;
   display: flex;
+  align-items: center;
+  gap: 1.5em;
   height: 100%;
 }
 
 .item {
   flex: 0 0 auto;
-  width: 400px;
-  height: 550px;
-  margin-right: 20px;
+  width: 500px;
+  height: 600px;
 }
 
 .item img {
@@ -657,4 +669,58 @@ select {
   padding-bottom: 0.5em;
   color: var(--btn-color);
   font-weight: 300;
+}
+
+/* ==================ABOUT IIIPNL========================= */
+.about_container {
+  --max-width: 1209px;
+  --padding: 1em;
+
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  height: 100vh;
+  margin-inline: auto;
+
+  background-image: url("/about_hero_bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.about_text {
+  width: 100%;
+  max-width: 23.125rem;
+  background-color: var(--btn-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1em 2em;
+}
+
+.about_text h1 {
+  font-size: var(--fs-800);
+  font-weight: var(--nav-fw);
+  font-family: var(--font-family);
+}
+
+.about_us {
+  --max-width: 1209px;
+  --padding: 1em;
+
+  width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+  padding-block: 3em;
+}
+
+.about_us_text1 {
+  padding-bottom: 2em;
+  font-size: var(--fs-600);
+  font-weight: 600;
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+
+.about_us_text2 {
+  font-weight: 300;
+  line-height: 1.5;
 }

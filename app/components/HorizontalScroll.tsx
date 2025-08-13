@@ -16,8 +16,6 @@ const images = [
   { src: "/scrollImage8.jpg", caption: "Maternity Departments" },
   { src: "/scrollImage9.jpg", caption: "AF Painthouse" },
   { src: "/scrollImage10.jpg", caption: "Development of Flyover" },
-  { src: "/scrollImage11.jpg", caption: "Bridge Construction" },
-  { src: "/scrollImage12.jpg", caption: "Re-Construction in old building" },
 ];
 
 export default function HorizontalScroll() {
