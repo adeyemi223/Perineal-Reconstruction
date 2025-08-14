@@ -91,9 +91,11 @@ export default function Home() {
           <div className="why_us_flex_container">
             <div className="why_us_flex1">
               <div className="number_text">
-                <span>99+</span>
-                <div className="inner_why_text">
+                <div className="number_flex">
+                  <span>99+</span>
                   <h4>Complete Projects</h4>
+                </div>
+                <div className="inner_why_text">
                   <p>
                     Eu tincidunt tortor aliquam nulla facilisi cras fermentum
                     odio eu. Hac habitasse platea dictumst vestibulum.
@@ -104,9 +106,11 @@ export default function Home() {
 
             <div className="why_us_flex1">
               <div className="number_text">
-                <span>55+</span>
-                <div className="inner_why_text">
+                <div className="number_flex">
+                  <span>55+</span>
                   <h4>Export Employees</h4>
+                </div>
+                <div className="inner_why_text">
                   <p>
                     Eu tincidunt tortor aliquam nulla facilisi cras fermentum
                     odio eu. Hac habitasse platea dictumst vestibulum.
@@ -117,9 +121,11 @@ export default function Home() {
 
             <div className="why_us_flex1">
               <div className="number_text">
-                <span>43</span>
-                <div className="inner_why_text">
+                <div className="number_flex">
+                  <span>43</span>
                   <h4>Running Projects</h4>
+                </div>
+                <div className="inner_why_text">
                   <p>
                     Eu tincidunt tortor aliquam nulla facilisi cras fermentum
                     odio eu. Hac habitasse platea dictumst vestibulum.

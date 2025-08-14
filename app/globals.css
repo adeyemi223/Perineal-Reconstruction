@@ -1,5 +1,5 @@
 /* google font */
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
 
 /* Box sizing rules */
 *,
@@ -79,7 +79,7 @@ select {
 
 :root {
   /* width && padding */
-  --max-width: 1209px;
+  --max-width: 1346.15px;
   --padding: 1em;
 
   --nav-fs: 0.788rem;
@@ -88,7 +88,7 @@ select {
   --fs-700: 1.5rem;
   --fs-600: 1.2rem;
   --fs-500: 1.125rem;
-  --font-family: "Playfair Display", serif;
+  --font-family: "El Messiri", sans-serif;
 
   /* color */
   --text-color: #000000;
@@ -122,7 +122,11 @@ select {
 
 .logo {
   background-color: var(--bg-color);
-  padding: 0.8em 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 79.99px;
 }
 
 .navigations {
@@ -197,8 +201,8 @@ select {
   /* --padding: 1em; */
 
   width: min(var(--max-width), 100%);
-  padding-left: 9em;
-  padding-top: 4em;
+  padding-left: 7.244rem;
+  padding-top: 3rem;
 }
 
 .Our_story_flex {
@@ -226,7 +230,6 @@ select {
   background-image: url("/our_story.svg");
   background-repeat: no-repeat;
   background-position: center;
-  /* background-size: cover; */
 }
 
 .story_content {
@@ -272,9 +275,10 @@ select {
 }
 
 .even_container {
-  width: min(var(--max-width), 100% - var(--padding) * 2);
+  padding: 3em 7.244rem;
+  /* width: min(var(--max-width), 100% - var(--padding) * 2);
   margin-inline: auto;
-  padding-block: 3em;
+  padding-block: 3em; */
 }
 
 .services_bg_color {
@@ -315,16 +319,22 @@ select {
   overflow: hidden;
   padding-inline: 4.5em;
   line-height: 1.5;
+  transition: max-height 0.7s ease;
 }
 
 .answer p {
   padding-block: 1em;
+  font-weight: lighter;
 }
 
-.faq img {
+.faq_arrow_icon {
+  width: 52px;
+  height: 52px;
   background-color: var(--bg-color);
-  padding: 0.5em;
   border-radius: 100vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .faq.active .answer {
@@ -334,7 +344,10 @@ select {
 
 .faq.active img {
   transform: rotate(180deg);
-  transition: all 0.3s ease;
+}
+
+.faq_arrow_icon img {
+  transition: transform 0.5s ease;
 }
 
 @keyframes fade {
@@ -348,11 +361,10 @@ select {
   }
 }
 
+/* ==========================our_work================ */
+
 .our_work_padding_block {
-  width: min(var(--max-width), 100% - var(--padding) * 2);
-  margin-inline: auto;
-  padding-top: 3em;
-  margin-bottom: 2rem;
+  padding: 3rem 7.244rem;
 }
 
 .our_work {
@@ -383,7 +395,7 @@ select {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  padding-left: 8em;
+  padding-left: 7.244rem;
 }
 
 .container {
@@ -396,8 +408,9 @@ select {
 
 .item {
   flex: 0 0 auto;
-  width: 500px;
-  height: 600px;
+  width: 100%;
+  max-width: 502.19px;
+  height: 602.62px;
 }
 
 .item img {
@@ -406,10 +419,20 @@ select {
   object-fit: cover;
 }
 
+.home {
+  position: relative;
+}
+
+.hover:hover {
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
 .item p {
-  margin-top: 8px;
+  margin-top: 9px;
   font-size: var(--fs-600);
-  font-weight: var(--nav-fw);
+  font-weight: lighter;
   font-family: var(--font-family);
 }
 
@@ -423,6 +446,7 @@ select {
 
 .why_us p {
   line-height: 1.5;
+  font-weight: lighter;
 }
 
 .why_us_flex_container {
@@ -450,30 +474,44 @@ select {
 
 .number_text {
   display: flex;
-  gap: 2.2em;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.number_flex {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
 }
 
 .number_text span {
   font-size: var(--fs-700);
+  font-weight: 500;
   font-family: var(--font-family);
 }
 
-.inner_why_text h4 {
-  padding-bottom: 1em;
-  font-size: var(--fs-600);
+.number_flex h4 {
+  font-size: var(--fs-500);
+  font-weight: var(--nav-fw);
 }
 
 .inner_why_text p {
-  font-weight: 300;
+  font-weight: lighter;
+  padding-left: 4em;
+  margin-top: -10px;
 }
 
 /* ======================explore==================== */
 
 .explore_grid {
   background-color: var(--bg-color);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  height: 688px;
   gap: 2em;
+}
+
+.explore_flex,
+.explore_image_grid {
+  flex-basis: 100%;
 }
 
 .explore_flex {
@@ -492,9 +530,9 @@ select {
 }
 
 .explore_flex p {
-  font-weight: 300;
+  font-weight: lighter;
   color: var(--btn-color);
-  line-height: 1.5;
+  line-height: 1.7;
   padding-bottom: 1.2em;
 }
 
@@ -513,7 +551,7 @@ select {
 .explore_image_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* column-gap: 1em; */
+  gap: 1em;
 }
 
 .explore_image_grid img {
@@ -522,19 +560,22 @@ select {
 }
 
 .first_image {
-  transform: translateY(-30px) scale(1);
+  transform: translateY(-30px);
 }
 
 .secound_image {
-  transform: scale(0.8);
+  /* transform: scale(0.8); */
+  padding: 16px 48px 16px 12.8px;
+  width: 290.16px;
+  height: 333.51px;
 }
 
 .third_image {
-  transform: translateY(38px) scale(0.9);
+  padding: 16px 12.8px 16px 25.6px;
 }
 
 .forth_image {
-  transform: translate(18px, 30px) scale(1);
+  transform: translate(25px);
 }
 
 /* ===================testimonials=================== */
@@ -544,6 +585,7 @@ select {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 500px;
+  height: 70vh;
 }
 
 .testimonial-container h3 {
@@ -573,14 +615,17 @@ select {
 }
 
 .testimonial-text {
-  font-size: 1.03rem;
+  font-size: 1.1rem;
+  font-weight: lighter;
   line-height: 1.6;
   color: #222;
   margin-bottom: 1rem;
 }
 
 .testimonial-author {
-  font-weight: 700;
+  font-size: var(--fs-700);
+  font-weight: 600;
+  font-family: var(--font-family);
   color: #333;
 }
 
@@ -624,10 +669,11 @@ select {
   background-image: url("/footer_img.svg");
   background-repeat: no-repeat;
   background-position: right;
+  background-size: 801.28px;
 }
 
 .footer_backgroud {
-  max-width: 1008px;
+  max-width: 1121.79px;
   background-color: var(--bg-color);
 }
 
@@ -672,7 +718,7 @@ select {
 }
 
 /* ==================ABOUT IIIPNL========================= */
-.about_container {
+/* .about_container {
   --max-width: 1209px;
   --padding: 1em;
 
@@ -723,4 +769,4 @@ select {
 .about_us_text2 {
   font-weight: 300;
   line-height: 1.5;
-}
+} */

@@ -2,11 +2,11 @@ import "./globals.css";
 import Link from "next/link";
 import { Metadata } from "next";
 import Navbar from "./components/Navbar";
-import { Lexend, Playfair_Display } from "next/font/google";
+import { Poppins} from "next/font/google";
 
-const lexend = Lexend({
+const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["200","300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={lexend.className}>
+      <body className={poppins.className}>
         <Navbar />
         <main>{children}</main>
         <footer className="footer">

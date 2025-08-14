@@ -57,7 +57,9 @@ export default function FaqSection() {
                   <span>{faq.number}</span>
                   <h4>{faq.title}</h4>
                 </div>
-                <img src="/arrow.svg" alt="icon" />
+                <div className="faq_arrow_icon">
+                  <img src="/arrow.svg" alt="icon" />
+                </div>
               </div>
 
               <div className="answer">

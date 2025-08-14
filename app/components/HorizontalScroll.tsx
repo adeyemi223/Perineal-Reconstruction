@@ -79,8 +79,10 @@ export default function HorizontalScroll() {
       <div className="container" ref={containerRef}>
         {images.map((image, i) => (
           <div className="item" key={i}>
-            <img src={image.src} alt={image.caption} />
-            <p>{image.caption}</p>
+            <div className="hover">
+              <img src={image.src} alt={image.caption} />
+              <p>{image.caption}</p>
+            </div>
           </div>
         ))}
       </div>
