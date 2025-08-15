@@ -129,6 +129,11 @@ select {
   height: 79.99px;
 }
 
+.logo img {
+  width: 180px;
+  height: 52.52px;
+}
+
 .navigations {
   display: flex;
   gap: 4.5em;
@@ -364,7 +369,7 @@ select {
 /* ==========================our_work================ */
 
 .our_work_padding_block {
-  padding: 3rem 7.244rem;
+  padding: 0 7.244rem;
 }
 
 .our_work {
