@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
 const images = [
   { src: "/scrollImage1.jpg", caption: "Highway roads Developments" },
   { src: "/scrollImage2.jpg", caption: "Pineri Buildings" },
@@ -25,13 +26,18 @@ export default function HorizontalScroll() {
   useLayoutEffect(() => {
     if (typeof window === "undefined") return;
 
-    const section = sectionRef.current;
-    const container = containerRef.current;
+    const section = sectionRef.current!;
+    const container = containerRef.current!;
     if (!section || !container) return;
 
     const ctx = gsap.context(() => {
-      const getDistance = () =>
-        Math.max(0, container.scrollWidth - section.clientWidth);
+      const getDistance = () => {
+        const styles = getComputedStyle(section);
+        const padLeft = parseFloat(styles.paddingLeft) || 0;
+        const padRight = parseFloat(styles.paddingRight) || 0;
+        const contentViewport = section.clientWidth - padLeft - padRight; // padding-aware
+        return Math.max(0, container.scrollWidth - contentViewport);
+      };
 
       const tween = gsap.to(container, {
         x: () => `-${getDistance()}`,
@@ -39,7 +45,7 @@ export default function HorizontalScroll() {
         scrollTrigger: {
           trigger: section,
           start: "top top",
-          end: () => `+=${getDistance()}`, // ← backticks!
+          end: () => `+=${getDistance()}`,
           pin: true,
           scrub: 1,
           invalidateOnRefresh: true,
@@ -83,6 +89,27 @@ export default function HorizontalScroll() {
               <img src={image.src} alt={image.caption} />
               <p>{image.caption}</p>
             </div>
+
+            {/* Arrow badge */}
+            <button className="arrow" aria-label="View project">
+              {/* SVG arrow (no external icon lib needed) */}
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17L17 7M17 7H8.5M17 7V15.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
           </div>
         ))}
       </div>

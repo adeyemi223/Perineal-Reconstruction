@@ -390,12 +390,12 @@ select {
   transition: all 0.3s ease;
 }
 
-/*=============== horizontal scrool section=============== */
+/*=============== horizontal scroll section =============== */
 .section {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  padding-left: 7.244rem;
+  padding-left: 7.244rem; /* keep your left inset */
 }
 
 .container {
@@ -404,9 +404,11 @@ select {
   align-items: center;
   gap: 1.5em;
   height: 100%;
+  padding-right: 7.244rem; /* ensures last card slides fully in */
 }
 
 .item {
+  position: relative; /* needed so arrow can anchor top-right */
   flex: 0 0 auto;
   width: 100%;
   max-width: 502.19px;
@@ -417,6 +419,7 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block; /* avoid unexpected gaps */
 }
 
 .home {
@@ -425,8 +428,9 @@ select {
 
 .hover:hover {
   transform: translateY(20px);
-  transition: all 0.5s ease;
+  transition: transform 0.5s ease;
   cursor: pointer;
+  will-change: transform;
 }
 
 .item p {
@@ -434,6 +438,49 @@ select {
   font-size: var(--fs-600);
   font-weight: lighter;
   font-family: var(--font-family);
+}
+
+/* ---------- Arrow badge ---------- */
+.arrow {
+  position: absolute;
+  top: 30px; /* stick 10px from top */
+  right: 20px; /* stick 10px from right */
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 9999px; /* pill/circle */
+  background: #f6f6f6c9; /* light bg */
+  color: #111; /* arrow color */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+
+  /* Start subtly out of view + hidden */
+  opacity: 0;
+  transform: translate(14px, -14px); /* slide in from top-right */
+  transition: transform 0.35s ease, opacity 0.35s ease, background 0.2s ease;
+  pointer-events: none; /* avoid capturing hover before visible */
+}
+
+.item:hover .arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+  pointer-events: auto; /* clickable once visible */
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Optional: on touch devices (no hover), keep it visible */
+@media (hover: none) {
+  .arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+    pointer-events: auto;
+  }
 }
 
 /* ===================why us ==================*/
