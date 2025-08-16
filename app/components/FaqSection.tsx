@@ -14,28 +14,28 @@ export default function FaqSection() {
   const faqs: FaqItem[] = [
     {
       number: "01",
-      title: "Construction",
-      text: "Massa tempor nec feugiat nisl. Nunc vel risus commodo viverra. Vivamus at augue eget arcu. At quis risus sed vulputate odio ut. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Hac habitasse platea dictumst vestibulum. Venenatis urna cursus eget nunc scelerisque viverra mauris. Non odio euismod lacinia at quis risus. Vulputate dignissim suspendisse in est.",
+      title: "Road Construction",
+      text: "From urban highways to rural access roads, our road construction division specializes in delivering durable, safe, and efficient transportation infrastructure. Leveraging modern engineering techniques, we ensure roadways are constructed to withstand environmental conditions and heavy usage while meeting government regulations.",
     },
     {
       number: "02",
-      title: "Site Project Management",
-      text: "Massa tempor nec feugiat nisl. Nunc vel risus commodo viverra. Vivamus at augue eget arcu. At quis risus sed vulputate odio ut. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Hac habitasse platea dictumst vestibulum. Venenatis urna cursus eget nunc scelerisque viverra mauris. Non odio euismod lacinia at quis risus. Vulputate dignissim suspendisse in est.",
+      title: "Building Construction",
+      text: "Our building construction services span residential, commercial, and industrial sectors. We excel in managing all phases—from groundwork and structural frameworks to finishing touches and interior outfitting. Every building project is executed with precision, on schedule, and within budget.",
     },
     {
       number: "03",
-      title: "Renovation",
-      text: "Massa tempor nec feugiat nisl. Nunc vel risus commodo viverra. Vivamus at augue eget arcu. At quis risus sed vulputate odio ut. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Hac habitasse platea dictumst vestibulum. Venenatis urna cursus eget nunc scelerisque viverra mauris. Non odio euismod lacinia at quis risus. Vulputate dignissim suspendisse in est.",
+      title: "Project Consulting & Management",
+      text: "We provide expert consultation to help shape project design, feasibility studies, and compliance planning. Our project management team oversees timelines, resource allocation, and quality controls to guarantee smooth delivery from start to finish.",
     },
     {
       number: "04",
-      title: "Development",
-      text: "Massa tempor nec feugiat nisl. Nunc vel risus commodo viverra. Vivamus at augue eget arcu. At quis risus sed vulputate odio ut. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Hac habitasse platea dictumst vestibulum. Venenatis urna cursus eget nunc scelerisque viverra mauris. Non odio euismod lacinia at quis risus. Vulputate dignissim suspendisse in est.",
+      title: "Sustainability & Safety Compliance",
+      text: "With strict adherence to health, safety, and environmental standards, we ensure every project site operates with full HSE-compliant protocols. Our commitment to sustainability reflects in our use of eco-friendly materials and waste minimization strategies.",
     },
     {
       number: "05",
-      title: "Sustainable Services",
-      text: "Massa tempor nec feugiat nisl. Nunc vel risus commodo viverra. Vivamus at augue eget arcu. At quis risus sed vulputate odio ut. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Hac habitasse platea dictumst vestibulum. Venenatis urna cursus eget nunc scelerisque viverra mauris. Non odio euismod lacinia at quis risus. Vulputate dignissim suspendisse in est.",
+      title: "Custom Construction Solutions",
+      text: "Understanding that every client's needs are unique, we tailor construction plans to align with specific requirements, including bespoke designs, innovative material use, and adaptive project scopes.",
     },
   ];
 
