@@ -2,11 +2,19 @@ import "./globals.css";
 import Link from "next/link";
 import { Metadata } from "next";
 import Navbar from "./components/Navbar";
-import { Poppins} from "next/font/google";
+import { Poppins, El_Messiri } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["200","300", "400", "500", "700"],
+  weight: ["200", "300", "400", "500", "700"],
+  variable: "--font-poppins",
+});
+
+const elMessiri = El_Messiri({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // El Messiri supports these weights
+  variable: "--font-el-messiri",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body className={`${poppins.variable} ${elMessiri.variable}`}>
         <Navbar />
         <main>{children}</main>
         <footer className="footer">

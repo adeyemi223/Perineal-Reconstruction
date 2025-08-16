@@ -1,6 +1,3 @@
-/* google font */
-@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
-
 /* Box sizing rules */
 *,
 *::before,
@@ -32,13 +29,13 @@ html:focus-within {
 html,
 body {
   height: 100%;
-  font-family: "Poppins", serif;
 }
 
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.3;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -88,7 +85,7 @@ select {
   --fs-700: 1.5rem;
   --fs-600: 1.2rem;
   --fs-500: 1.125rem;
-  --font-family: "El Messiri", sans-serif;
+  /* --font-family: "El Messiri", sans-serif; */
 
   /* color */
   --text-color: #000000;
@@ -167,7 +164,7 @@ select {
 
 .home {
   height: 100vh;
-  background-image: url("/hero_bg_img.webp");
+  background-image: url("/header.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -181,22 +178,27 @@ select {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 1.5em;
+  padding: 2.438rem 3.5rem;
   display: flex;
-  align-items: center;
-  gap: 2em;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5em;
 }
 
 .home_header,
-.home_p {
+.home_h3 {
   flex-basis: 100%;
 }
 
-.home_header h3 {
-  font-size: var(--fs-800);
-  line-height: 1.1;
-  font-weight: var(--nav-fw);
-  font-family: "Playfair Display", serif;
+.home_header h4 {
+  font-size: var(--fs-700);
+  font-weight: 300;
+  color: #eb5130;
+}
+
+.home_h3 {
+  font-size: 2.413rem;
+  font-family: var(--font-el-messiri), sans-serif;
 }
 
 /* ======================story==================== */
@@ -232,9 +234,6 @@ select {
   background: #ffffff;
   position: absolute;
   left: 55%;
-  background-image: url("/our_story.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .story_content {
@@ -244,7 +243,7 @@ select {
 .story_text h3 {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
-  font-family: "Playfair Display", serif;
+  font-family: var(--font-el-messiri), sans-serif;
   padding-block: 0.6em;
 }
 
@@ -256,19 +255,17 @@ select {
 }
 
 .button {
-  margin-block: 1em;
+  margin-block: 3em;
   padding: 0.75em 2em;
-  border: 2px solid var(--bg-color);
-  color: var(--bg-color);
-  font-weight: var(--nav-fw);
-  background: transparent;
+  background: #eb5130;
+  color: #ffffff;
+  border: none;
 }
 
 .button:hover {
-  background-color: var(--bg-color);
-  transition: all 0.3s ease;
-  color: var(--btn-color);
   cursor: pointer;
+  opacity: 0.9;
+  transition: all 0.7s ease;
 }
 
 .story_image {
@@ -293,13 +290,14 @@ select {
 .our_services h3 {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
-  font-family: var(--font-family);
+  font-family: var(--font-el-messiri), sans-serif;
   padding-bottom: 0.3em;
+  border-bottom: 1px solid #000000;
 }
 
 /* ======================faqs==================== */
 .faq {
-  border-bottom: 2px solid #00000041;
+  border-bottom: 2px solid #00000070;
   cursor: pointer;
 }
 
@@ -316,7 +314,7 @@ select {
   gap: 2em;
   font-size: var(--fs-700);
   font-weight: var(--nav-fw);
-  font-family: var(--font-family);
+  font-family: var(--font-el-messiri), sans-serif;
 }
 
 .answer {
@@ -329,13 +327,13 @@ select {
 
 .answer p {
   padding-block: 1em;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .faq_arrow_icon {
   width: 52px;
   height: 52px;
-  background-color: var(--bg-color);
+  background-color: #eb5130;
   border-radius: 100vmax;
   display: flex;
   align-items: center;
@@ -369,7 +367,7 @@ select {
 /* ==========================our_work================ */
 
 .our_work_padding_block {
-  padding: 0 7.244rem;
+  padding: 3rem 7.244rem 0;
 }
 
 .our_work {
@@ -381,18 +379,19 @@ select {
 .our_work h3 {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
-  font-family: var(--font-family);
+  font-family: var(--font-el-messiri), sans-serif;
 }
 
 .project_link {
   font-size: var(--fs-600);
   color: var(--bg-color);
-  font-family: var(--font-family);
+  font-family: var(--font-el-messiri), sans-serif;
+  text-decoration: none;
 }
 
 .project_link:hover {
-  text-decoration: none;
-  transition: all 0.3s ease;
+  text-decoration: underline;
+  transition: all 0.7s ease;
 }
 
 /*=============== horizontal scroll section =============== */
@@ -404,7 +403,7 @@ select {
 }
 
 .container {
-  padding-top: 1em;
+  /* padding-top: 1em; */
   display: flex;
   align-items: center;
   gap: 1.5em;
@@ -418,6 +417,7 @@ select {
   width: 100%;
   max-width: 502.19px;
   height: 602.62px;
+  padding-top: 1em;
 }
 
 .item img {
@@ -439,10 +439,10 @@ select {
 }
 
 .item p {
-  margin-top: 9px;
+  padding-top: 1em;
   font-size: var(--fs-600);
-  font-weight: lighter;
-  font-family: var(--font-family);
+  font-weight: 300;
+  font-family: var(--font-el-messiri), sans-serif;
 }
 
 /* ---------- Arrow badge ---------- */
@@ -464,14 +464,14 @@ select {
 
   /* Start subtly out of view + hidden */
   opacity: 0;
-  transform: translate(14px, -14px); /* slide in from top-right */
+  transform: translate(0, 0);
   transition: transform 0.35s ease, opacity 0.35s ease, background 0.2s ease;
   pointer-events: none; /* avoid capturing hover before visible */
 }
 
 .item:hover .arrow {
   opacity: 1;
-  transform: translate(0, 0);
+  transform: translate(-2px, 20px); /* slide in from top-right */
   pointer-events: auto; /* clickable once visible */
 }
 
@@ -479,80 +479,51 @@ select {
   background: rgba(255, 255, 255, 1);
 }
 
-/* Optional: on touch devices (no hover), keep it visible */
-@media (hover: none) {
-  .arrow {
-    opacity: 1;
-    transform: translate(0, 0);
-    pointer-events: auto;
-  }
-}
-
 /* ===================why us ==================*/
 .why_us h3 {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
-  font-family: var(--font-family);
+  font-family: var(--font-el-messiri), sans-serif;
   padding-bottom: 0.5em;
 }
 
 .why_us p {
   line-height: 1.5;
-  font-weight: lighter;
+  font-weight: 300;
 }
 
-.why_us_flex_container {
-  padding-top: 3.5em;
+.why_grid_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(22.533rem, 100%), 1fr));
+  gap: 2em;
+  padding-top: 3em;
+  padding-bottom: 7em;
+}
+
+.grid_card {
   display: flex;
-  gap: 4em;
+  column-gap: 1em;
+  align-items: flex-start;
 }
 
-.why_us_flex1 {
-  border-top: 2px solid var(--bg-color);
-  padding-block: 2.2em;
-  padding-right: 0.2em;
-  position: relative;
-}
-
-.why_us_flex1::before {
-  content: " ";
-  width: 20px;
-  height: 20px;
-  background: var(--bg-color);
-  position: absolute;
-  top: -6%;
-  border-radius: 100vmax;
-}
-
-.number_text {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-}
-.number_flex {
-  display: flex;
-  align-items: center;
-  gap: 1.5em;
-}
-
-.number_text span {
-  font-size: var(--fs-700);
-  font-weight: 500;
-  font-family: var(--font-family);
-}
-
-.number_flex h4 {
+.grid_card_text h4 {
+  padding-right: 1em;
+  padding-top: 0.3em;
+  padding-bottom: 1em;
   font-size: var(--fs-500);
   font-weight: var(--nav-fw);
 }
 
-.inner_why_text p {
-  font-weight: lighter;
-  padding-left: 4em;
-  margin-top: -10px;
+.grid_card_text p {
+  font-weight: 300;
+  padding-right: 4.5em;
 }
 
 /* ======================explore==================== */
+
+.explore_padding {
+  padding-block: 0;
+}
 
 .explore_grid {
   background-color: var(--bg-color);
@@ -576,13 +547,13 @@ select {
 .explore_flex h3 {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
-  font-family: var(--font-family);
+  font-family: var(--font-el-messiri), sans-serif;
   color: var(--btn-color);
   padding-bottom: 0.7em;
 }
 
 .explore_flex p {
-  font-weight: lighter;
+  font-weight: 300;
   color: var(--btn-color);
   line-height: 1.7;
   padding-bottom: 1.2em;
@@ -590,7 +561,9 @@ select {
 
 .explore_btn {
   text-decoration: none;
-  color: var(--bg-color);
+  color: #ffffff;
+  background: #eb5130;
+  border: none;
   padding: 0.75em 1.5em;
 }
 
@@ -616,7 +589,6 @@ select {
 }
 
 .secound_image {
-  /* transform: scale(0.8); */
   padding: 16px 48px 16px 12.8px;
   width: 290.16px;
   height: 333.51px;
@@ -633,18 +605,16 @@ select {
 /* ===================testimonials=================== */
 
 .testimonial_bg {
-  background-image: url("/testimonial.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 500px;
-  height: 70vh;
+  background-color: #fff7e3;
 }
 
 .testimonial-container h3 {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
-  font-family: var(--font-family);
+  font-family: var(--font-el-messiri), sans-serif;
   text-align: center;
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
 
 .testimonial-slides-wrapper {
@@ -677,7 +647,7 @@ select {
 .testimonial-author {
   font-size: var(--fs-700);
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: var(--font-el-messiri), sans-serif;
   color: #333;
 }
 
@@ -704,14 +674,14 @@ select {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #ddd;
+  background: #dbc8a9;
   border: none;
   cursor: pointer;
   padding: 0;
 }
 
 .dot-active {
-  background: #111;
+  background: #e3b94fc4;
 }
 
 /* =================footer================== */
@@ -722,6 +692,7 @@ select {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 801.28px;
+  background-color: #fff7e3;
 }
 
 .footer_backgroud {
@@ -768,57 +739,3 @@ select {
   color: var(--btn-color);
   font-weight: 300;
 }
-
-/* ==================ABOUT IIIPNL========================= */
-/* .about_container {
-  --max-width: 1209px;
-  --padding: 1em;
-
-  width: min(var(--max-width), 100% - var(--padding) * 2);
-  height: 100vh;
-  margin-inline: auto;
-
-  background-image: url("/about_hero_bg.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
-
-.about_text {
-  width: 100%;
-  max-width: 23.125rem;
-  background-color: var(--btn-color);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 1em 2em;
-}
-
-.about_text h1 {
-  font-size: var(--fs-800);
-  font-weight: var(--nav-fw);
-  font-family: var(--font-family);
-}
-
-.about_us {
-  --max-width: 1209px;
-  --padding: 1em;
-
-  width: min(var(--max-width), 100% - var(--padding) * 2);
-  margin-inline: auto;
-  padding-block: 3em;
-}
-
-.about_us_text1 {
-  padding-bottom: 2em;
-  font-size: var(--fs-600);
-  font-weight: 600;
-  font-family: var(--font-family);
-  line-height: 1.5;
-}
-
-.about_us_text2 {
-  font-weight: 300;
-  line-height: 1.5;
-} */

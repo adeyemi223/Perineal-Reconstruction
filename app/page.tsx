@@ -16,14 +16,12 @@ export default function Home() {
       <section className="home">
         <div className="home_context">
           <div className="home_header">
-            <h3>Pellentesque eu tincidunt</h3>
+            <h4>PNL Constructions</h4>
           </div>
           <div>
-            <p className="home_p">
-              Quis auctor elit sed vulputate. Ipsum dolor sit amet consectetur
-              adipiscing. Consectetur adipiscing elit duis tristique. Ultricies
-              leo integer malesuada nunc vel risus commodo.
-            </p>
+            <h3 className="home_h3">
+              Building the Future with Innovation and Integrity{" "}
+            </h3>
           </div>
         </div>
       </section>
@@ -35,27 +33,24 @@ export default function Home() {
               <div className="story_content">
                 <h3>Our Story</h3>
                 <p>
-                  Massa tempor nec feugiat nisl. Nunc vel risus commodo viverra.
-                  Vivamus at augue eget arcu. At quis risus sed vulputate odio
-                  ut. Eu tincidunt tortor aliquam nulla facilisi cras fermentum
-                  odio eu. Hac habitasse platea dictumst vestibulum. Venenatis
-                  urna cursus eget nunc scelerisque viverra mauris. Non odio
-                  euismod lacinia at quis risus. Vulputate dignissim suspendisse
-                  in est.
+                  At PNL Constructions, every structure we build tells a story —
+                  one of innovation, integrity, and dedication. Founded with a
+                  vision to redefine excellence in the construction industry,
+                  we've grown into a trusted partner for complex projects across
+                  both public and private sectors. Our journey is built on a
+                  foundation of expertise, sustainability, and client-focused
+                  service that continues to shape the communities we serve.
                 </p>
                 <p>
-                  Pharetra convallis posuere morbi leo. Nulla facilisi etiam
-                  dignissim diam quis enim lobortis. Porta lorem mollis aliquam
-                  ut porttitor. Sed risus ultricies tristique nulla aliquet
-                  enim. Augue interdum velit euismod in. Nec dui nunc mattis
-                  enim ut tellus elementum sagittis vitae.
+                  Discover the full story behind PNL Constructions — our
+                  mission, values, and the team driving our success.
                 </p>
                 <button className="button">Read More</button>
               </div>
             </div>
 
             <div className="story_image">
-              <img src="/materials.svg" alt="" />
+              <img src="/side_story.svg" alt="building" />
             </div>
           </div>
         </div>
@@ -77,60 +72,79 @@ export default function Home() {
         <div className="even_container">
           <div className="why_us">
             <h3>Why Us ?</h3>
+            <p>Experience, Trustworthiness, and Innovation The PNL Promise</p>
             <p>
-              Sit amet nisl suscipit adipiscing bibendum est. In ornare quam
-              viverra orci. Neque volutpat ac tincidunt vitae semper quis.
-              Tellus in hac habitasse platea dictumst vestibulum rhoncus est
-              pellentesque. Sem nulla pharetra diam sit amet nisl. Cursus mattis
-              molestie a iaculis. Arcu cursus vitae congue mauris rhoncus aenean
-              vel elit scelerisque. Vel pretium lectus quam id leo in. Massa
-              tempor nec feugiat nisl. Nunc vel risus commodo viverra.
+              Choosing PNL Constructions means partnering with a company that
+              embodies professionalism, reliability, and forward-thinking
+              construction expertise. Here's why clients trust PNL:
             </p>
           </div>
 
-          <div className="why_us_flex_container">
-            <div className="why_us_flex1">
-              <div className="number_text">
-                <div className="number_flex">
-                  <span>99+</span>
-                  <h4>Complete Projects</h4>
-                </div>
-                <div className="inner_why_text">
-                  <p>
-                    Eu tincidunt tortor aliquam nulla facilisi cras fermentum
-                    odio eu. Hac habitasse platea dictumst vestibulum.
-                  </p>
-                </div>
+          <div className="why_grid_cards">
+            <div className="grid_card">
+              <img src="/icon1.svg" alt="icon" />
+              <div className="grid_card_text">
+                <h4>Proven Track Record</h4>
+                <p>
+                  Our portfolio features a diverse range of successful projects
+                  in the public and private sectors, demonstrating our ability
+                  to deliver complex developments on time and within budget.
+                </p>
               </div>
             </div>
-
-            <div className="why_us_flex1">
-              <div className="number_text">
-                <div className="number_flex">
-                  <span>55+</span>
-                  <h4>Export Employees</h4>
-                </div>
-                <div className="inner_why_text">
-                  <p>
-                    Eu tincidunt tortor aliquam nulla facilisi cras fermentum
-                    odio eu. Hac habitasse platea dictumst vestibulum.
-                  </p>
-                </div>
+            <div className="grid_card">
+              <img src="/icon2.svg" alt="icon" />
+              <div className="grid_card_text">
+                <h4>Industry Expertise and Capacity</h4>
+                <p>
+                  Equipped with advanced technology, skilled personnel, and
+                  extensive knowledge, we handle large-scale projects that
+                  demand precision, compliance, and creative problem-solving.
+                </p>
               </div>
             </div>
-
-            <div className="why_us_flex1">
-              <div className="number_text">
-                <div className="number_flex">
-                  <span>43</span>
-                  <h4>Running Projects</h4>
-                </div>
-                <div className="inner_why_text">
-                  <p>
-                    Eu tincidunt tortor aliquam nulla facilisi cras fermentum
-                    odio eu. Hac habitasse platea dictumst vestibulum.
-                  </p>
-                </div>
+            <div className="grid_card">
+              <img src="/icon3.svg" alt="icon" />
+              <div className="grid_card_text">
+                <h4>Client-Centric Approach</h4>
+                <p>
+                  We prioritize understanding your goals and challenges,
+                  providing customized solutions and maintaining transparent
+                  communication throughout the project lifecycle.
+                </p>
+              </div>
+            </div>
+            <div className="grid_card">
+              <img src="/icon4.svg" alt="icon" />
+              <div className="grid_card_text">
+                <h4>Commitment to Safety and Sustainability</h4>
+                <p>
+                  Our rigorous safety measures protect our workforce and
+                  stakeholders, while our sustainable construction practices
+                  minimize environmental impact.
+                </p>
+              </div>
+            </div>
+            <div className="grid_card">
+              <img src="/icon5.svg" alt="icon" />
+              <div className="grid_card_text">
+                <h4>Quality You Can Count On</h4>
+                <p>
+                  PNL's quality assurance processes align with international
+                  construction standards, ensuring structural integrity,
+                  aesthetic excellence, and long-term durability.
+                </p>
+              </div>
+            </div>
+            <div className="grid_card">
+              <img src="/icon6.svg" alt="icon" />
+              <div className="grid_card_text">
+                <h4>Comprehensive Support</h4>
+                <p>
+                  Beyond project completion, we offer ongoing maintenance
+                  support and professional advice for your evolving construction
+                  needs.
+                </p>
               </div>
             </div>
           </div>
@@ -138,7 +152,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="even_container">
+        <div className="even_container explore_padding">
           <div className="explore_grid">
             <div className="explore_flex">
               <h3>Explore Our Worked Sites</h3>
