@@ -220,7 +220,7 @@ select {
 
 .story_text {
   max-width: 60.481rem;
-  min-height: 70vh;
+  min-height: 80vh;
   display: flex;
   flex-basis: 70%;
   background-color: #ffffff;
@@ -471,6 +471,7 @@ select {
 
 .item:hover .arrow {
   opacity: 1;
+  transition: all 0.7s ease;
   transform: translate(-2px, 20px); /* slide in from top-right */
   pointer-events: auto; /* clickable once visible */
 }
@@ -516,7 +517,7 @@ select {
 
 .grid_card_text p {
   font-weight: 300;
-  padding-right: 4.5em;
+  /* padding-right: 4.5em; */
 }
 
 /* ======================explore==================== */
@@ -556,7 +557,12 @@ select {
   font-weight: 300;
   color: var(--btn-color);
   line-height: 1.7;
-  padding-bottom: 1.2em;
+}
+
+.explore_second_p {
+  padding-block: 2em;
+  text-wrap: balance;
+  /* padding-right: 2em; */
 }
 
 .explore_btn {

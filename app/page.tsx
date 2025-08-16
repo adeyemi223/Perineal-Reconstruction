@@ -156,15 +156,12 @@ export default function Home() {
           <div className="explore_grid">
             <div className="explore_flex">
               <h3>Explore Our Worked Sites</h3>
-              <p>
-                Sit amet nisl suscipit adipiscing bibendum est. In ornare quam
-                viverra orci. Neque volutpat ac tincidunt vitae semper quis.
-                Tellus in hac habitasse platea dictumst vestibulum rhoncus est
-                pellentesque. Sem nulla pharetra diam sit amet nisl. Cursus
-                mattis molestie a iaculis. Arcu cursus vitae congue mauris
-                rhoncus aenean vel elit scelerisque. Vel pretium lectus quam id
-                leo in. Massa tempor nec feugiat nisl. Nunc vel risus commodo
-                viverra.
+              <p>A Showcase of Excellence in Every Project</p>
+              <p className="explore_second_p">
+                A Showcase of Excellence in Every Project Discover how PNL
+                Constructions brings plans to life through our diverse portfolio
+                of landmark projects. Each site reflects our dedication to
+                quality, safety, and innovation.
               </p>
               <Link href="/contact">
                 <button className="explore_btn">
