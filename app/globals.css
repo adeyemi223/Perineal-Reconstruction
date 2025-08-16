@@ -204,12 +204,7 @@ select {
 /* ======================story==================== */
 
 .story_even_container {
-  --max-width: 100%;
-  /* --padding: 1em; */
-
-  width: min(var(--max-width), 100%);
-  padding-left: 7.244rem;
-  padding-top: 3rem;
+  padding: 3rem 0 0 clamp(1rem, 5vw, 7.244rem);
 }
 
 .Our_story_flex {
@@ -277,10 +272,7 @@ select {
 }
 
 .even_container {
-  padding: 3em 7.244rem;
-  /* width: min(var(--max-width), 100% - var(--padding) * 2);
-  margin-inline: auto;
-  padding-block: 3em; */
+  padding: 3rem clamp(1rem, 5vw, 7.244rem);
 }
 
 .services_bg_color {
@@ -367,7 +359,7 @@ select {
 /* ==========================our_work================ */
 
 .our_work_padding_block {
-  padding: 3rem 7.244rem 0;
+  padding: 3rem clamp(1rem, 5vw, 7.244rem) 0;
 }
 
 .our_work {
@@ -399,7 +391,7 @@ select {
   position: relative;
   height: clamp(420px, calc(100dvh - 0px), 900px);
   overflow: hidden;
-  padding-left: 7.244rem;
+  padding: 0 clamp(1rem, 5vw, 7.244rem) 0;
 }
 
 .container {
@@ -408,7 +400,6 @@ select {
   align-items: center;
   gap: 1.5em;
   height: 100%;
-  padding-right: 7.244rem;
 }
 
 .item {
