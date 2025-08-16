@@ -397,26 +397,25 @@ select {
 /*=============== horizontal scroll section =============== */
 .section {
   position: relative;
-  height: 100vh;
+  height: clamp(420px, calc(100dvh - 0px), 900px);
   overflow: hidden;
-  padding-left: 7.244rem; /* keep your left inset */
+  padding-left: 7.244rem;
 }
 
 .container {
-  /* padding-top: 1em; */
+  padding-top: 2em;
   display: flex;
   align-items: center;
   gap: 1.5em;
   height: 100%;
-  padding-right: 7.244rem; /* ensures last card slides fully in */
+  padding-right: 7.244rem;
 }
 
 .item {
   position: relative; /* needed so arrow can anchor top-right */
   flex: 0 0 auto;
-  width: 100%;
-  max-width: 502.19px;
-  height: 602.62px;
+  width: clamp(240px, 36vw, 520px);
+  height: 100%;
   padding-top: 1em;
 }
 
@@ -424,7 +423,6 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block; /* avoid unexpected gaps */
 }
 
 .home {
@@ -432,7 +430,7 @@ select {
 }
 
 .hover:hover {
-  transform: translateY(20px);
+  transform: translateY(30px);
   transition: transform 0.5s ease;
   cursor: pointer;
   will-change: transform;
@@ -448,14 +446,14 @@ select {
 /* ---------- Arrow badge ---------- */
 .arrow {
   position: absolute;
-  top: 30px; /* stick 10px from top */
-  right: 20px; /* stick 10px from right */
+  top: 30px;
+  right: 20px;
   width: 50px;
   height: 50px;
   border: none;
-  border-radius: 9999px; /* pill/circle */
-  background: #f6f6f6c9; /* light bg */
-  color: #111; /* arrow color */
+  border-radius: 9999px;
+  background: #f6f6f6c9;
+  color: #111;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   display: inline-flex;
   align-items: center;
