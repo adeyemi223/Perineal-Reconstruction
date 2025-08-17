@@ -581,17 +581,15 @@ select {
 }
 
 .secound_image {
-  padding: 16px 48px 16px 12.8px;
-  width: 290.16px;
-  height: 333.51px;
+  transform: scale(0.8);
 }
 
 .third_image {
-  padding: 16px 12.8px 16px 25.6px;
+  transform: scale(0.9) translateY(-30px);
 }
 
 .forth_image {
-  transform: translate(25px);
+  transform: translateX(20px) translateY(-20px);
 }
 
 /* ===================testimonials=================== */
