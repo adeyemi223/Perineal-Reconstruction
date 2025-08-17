@@ -389,7 +389,6 @@ select {
 /*=============== horizontal scroll section =============== */
 .section {
   position: relative;
-  height: clamp(420px, calc(100dvh - 0px), 900px);
   overflow: hidden;
   padding: 0 clamp(1rem, 5vw, 7.244rem) 0;
 }
@@ -405,7 +404,7 @@ select {
 .item {
   position: relative; /* needed so arrow can anchor top-right */
   flex: 0 0 auto;
-  width: clamp(240px, 36vw, 520px);
+  width: clamp(240px, 36vw, 519.99px);
   height: 100%;
   padding-top: 1em;
 }
@@ -506,7 +505,6 @@ select {
 
 .grid_card_text p {
   font-weight: 300;
-  /* padding-right: 4.5em; */
 }
 
 /* ======================explore==================== */
@@ -551,7 +549,6 @@ select {
 .explore_second_p {
   padding-block: 2em;
   text-wrap: balance;
-  /* padding-right: 2em; */
 }
 
 .explore_btn {
