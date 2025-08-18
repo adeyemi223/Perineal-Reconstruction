@@ -156,10 +156,9 @@ export default function Home() {
               <h3>Explore Our Worked Sites</h3>
               <p>A Showcase of Excellence in Every Project</p>
               <p className="explore_second_p">
-                A Showcase of Excellence in Every Project Discover how PNL
-                Constructions brings plans to life through our diverse portfolio
-                of landmark projects. Each site reflects our dedication to
-                quality, safety, and innovation.
+                Discover how PNL Constructions brings plans to life through our
+                diverse portfolio of landmark projects. Each site reflects our
+                dedication to quality, safety, and innovation.
               </p>
               <Link href="/contact">
                 <button className="explore_btn">

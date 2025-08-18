@@ -566,7 +566,7 @@ select {
 
 .explore_second_p {
   padding-block: 2em;
-  text-wrap: balance;
+  max-width: 475px;
 }
 
 .explore_btn {
