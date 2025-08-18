@@ -152,7 +152,7 @@ select {
   bottom: -2px;
   width: 0;
   height: 1.1px;
-  background-color: var(--text-color);
+  background-color: #eb5130;
 }
 
 .nav_links:hover::after {
@@ -160,6 +160,11 @@ select {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+
+/* .active_nav_links {
+  color: #eb5130;
+  font-weight: 500;
+} */
 /* =====================header_bg================= */
 
 .home {
@@ -219,20 +224,14 @@ select {
   display: flex;
   flex-basis: 70%;
   background-color: #ffffff;
-  position: relative;
-}
-
-.story_text::before {
-  content: " ";
-  width: 60%;
-  height: 100%;
-  background: #ffffff;
-  position: absolute;
-  left: 55%;
+  background-image: url("/story_side_image.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 .story_content {
   z-index: 1;
+  align-self: center;
 }
 
 .story_text h3 {
@@ -243,7 +242,8 @@ select {
 }
 
 .story_text p {
-  max-width: 38.481rem;
+  text-wrap: balance;
+  max-width: 43.688rem;
   padding-block: 1em;
   line-height: 1.5;
   font-weight: 300;
@@ -390,6 +390,7 @@ select {
 .section {
   position: relative;
   overflow: hidden;
+  height: 110vh;
   padding: 0 clamp(1rem, 5vw, 7.244rem) 0;
 }
 
@@ -427,7 +428,7 @@ select {
 }
 
 .item p {
-  padding-top: 1em;
+  padding-top: 0.5em;
   font-size: var(--fs-600);
   font-weight: 300;
   font-family: var(--font-el-messiri), sans-serif;
@@ -474,11 +475,19 @@ select {
   font-weight: var(--nav-fw);
   font-family: var(--font-el-messiri), sans-serif;
   padding-bottom: 0.5em;
+  color: #133431;
 }
 
-.why_us p {
+.why_us_fist_p {
+  font-weight: 500;
+  color: #133431;
+  padding-bottom: 2em;
+}
+
+.why_us_second_p {
   line-height: 1.5;
   font-weight: 300;
+  color: #133431;
 }
 
 .why_grid_cards {
@@ -501,10 +510,12 @@ select {
   padding-bottom: 1em;
   font-size: var(--fs-500);
   font-weight: var(--nav-fw);
+  color: #133431;
 }
 
 .grid_card_text p {
   font-weight: 300;
+  color: #133431;
 }
 
 /* ======================explore==================== */
@@ -603,7 +614,7 @@ select {
   font-weight: var(--nav-fw);
   font-family: var(--font-el-messiri), sans-serif;
   text-align: center;
-  padding-top: 2em;
+  padding-top: 5em;
   padding-bottom: 1em;
 }
 
@@ -642,7 +653,8 @@ select {
 }
 
 .testimonial-controls {
-  margin-top: 16px;
+  padding-top: 1em;
+  padding-bottom: 3em;
   display: flex;
   align-items: center;
   justify-content: center;

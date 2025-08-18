@@ -41,10 +41,6 @@ export default function Home() {
                   foundation of expertise, sustainability, and client-focused
                   service that continues to shape the communities we serve.
                 </p>
-                <p>
-                  Discover the full story behind PNL Constructions — our
-                  mission, values, and the team driving our success.
-                </p>
                 <button className="button">Read More</button>
               </div>
             </div>
@@ -72,8 +68,10 @@ export default function Home() {
         <div className="even_container">
           <div className="why_us">
             <h3>Why Us ?</h3>
-            <p>Experience, Trustworthiness, and Innovation The PNL Promise</p>
-            <p>
+            <p className="why_us_fist_p">
+              Experience, Trustworthiness, and Innovation The PNL Promise
+            </p>
+            <p className="why_us_second_p">
               Choosing PNL Constructions means partnering with a company that
               embodies professionalism, reliability, and forward-thinking
               construction expertise. Here's why clients trust PNL:

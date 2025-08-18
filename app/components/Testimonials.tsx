@@ -31,7 +31,7 @@ export default function TestimonialSlider() {
   };
 
   return (
-    <section className="">
+    <section>
       <div className="even_container testimonial_bg">
         <div
           className="testimonial-container"
