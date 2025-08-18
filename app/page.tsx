@@ -160,7 +160,7 @@ export default function Home() {
                 diverse portfolio of landmark projects. Each site reflects our
                 dedication to quality, safety, and innovation.
               </p>
-              <Link href="/contact">
+              <Link href="/">
                 <button className="explore_btn">
                   Discuss New Project Now!
                 </button>
