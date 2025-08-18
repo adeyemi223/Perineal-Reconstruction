@@ -397,7 +397,7 @@ select {
 .section {
   position: relative;
   overflow: hidden;
-  height: 110vh;
+  height: 100vh;
   padding: 0 clamp(1rem, 5vw, 7.244rem) 0;
 }
 
@@ -406,14 +406,13 @@ select {
   display: flex;
   align-items: center;
   gap: 1.5em;
-  height: 100%;
 }
 
 .item {
   position: relative; /* needed so arrow can anchor top-right */
   flex: 0 0 auto;
   width: clamp(240px, 32vw, 680.25px);
-  height: 100%;
+  aspect-ratio: 4/5;
   padding-top: 1em;
 }
 
