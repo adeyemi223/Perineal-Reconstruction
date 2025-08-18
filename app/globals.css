@@ -29,6 +29,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  overscroll-behavior: none;
 }
 
 /* Set core body defaults */
@@ -203,6 +204,7 @@ select {
 
 .home_h3 {
   font-size: 2.413rem;
+  color: #133431;
   font-family: var(--font-el-messiri), sans-serif;
 }
 
@@ -239,14 +241,16 @@ select {
   font-weight: var(--nav-fw);
   font-family: var(--font-el-messiri), sans-serif;
   padding-block: 0.6em;
+  color: #133431;
 }
 
 .story_text p {
   text-wrap: balance;
   max-width: 43.688rem;
   padding-block: 1em;
-  line-height: 1.5;
+  line-height: 1.7;
   font-weight: 300;
+  color: #133431;
 }
 
 .button {
@@ -280,16 +284,17 @@ select {
 }
 
 .our_services h3 {
+  color: #133431;
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
   font-family: var(--font-el-messiri), sans-serif;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #133431;
 }
 
 /* ======================faqs==================== */
 .faq {
-  border-bottom: 2px solid #00000070;
+  border-bottom: 1px solid #133431;
   cursor: pointer;
 }
 
@@ -297,13 +302,13 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1em;
-  padding-top: 1em;
+  padding-block: 0.5em;
 }
 
 .question_number {
+  color: #133431;
   display: flex;
-  gap: 2em;
+  gap: 1.5em;
   font-size: var(--fs-700);
   font-weight: var(--nav-fw);
   font-family: var(--font-el-messiri), sans-serif;
@@ -312,14 +317,16 @@ select {
 .answer {
   max-height: 0;
   overflow: hidden;
-  padding-inline: 4.5em;
+  padding-inline: 4em;
   line-height: 1.5;
   transition: max-height 0.7s ease;
 }
 
 .answer p {
-  padding-block: 1em;
+  color: #133431;
   font-weight: 300;
+  line-height: 1.7;
+  padding-bottom: 1em;
 }
 
 .faq_arrow_icon {
@@ -405,7 +412,7 @@ select {
 .item {
   position: relative; /* needed so arrow can anchor top-right */
   flex: 0 0 auto;
-  width: clamp(240px, 36vw, 519.99px);
+  width: clamp(240px, 32vw, 680.25px);
   height: 100%;
   padding-top: 1em;
 }
@@ -474,14 +481,14 @@ select {
   font-size: var(--fs-800);
   font-weight: var(--nav-fw);
   font-family: var(--font-el-messiri), sans-serif;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.2em;
   color: #133431;
 }
 
 .why_us_fist_p {
   font-weight: 500;
   color: #133431;
-  padding-bottom: 2em;
+  line-height: 1.9;
 }
 
 .why_us_second_p {
@@ -516,6 +523,7 @@ select {
 .grid_card_text p {
   font-weight: 300;
   color: #133431;
+  line-height: 1.7;
 }
 
 /* ======================explore==================== */
