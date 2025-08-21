@@ -3,6 +3,7 @@ import Link from "next/link";
 import FaqSection from "./components/FaqSection";
 import TestimonialSlider from "./components/Testimonials";
 import HorizontalScroll from "./components/HorizontalScroll";
+import SectionWrapper from "./components/Sectionwrapper";
 
 export const metadata: Metadata = {
   title: "Home | Perineal Reconstruction",
@@ -15,14 +16,16 @@ export default function Home() {
     <>
       <section className="home">
         <div className="home_context">
-          <div className="home_header">
-            <h4>PNL Constructions</h4>
-          </div>
-          <div>
-            <h3 className="home_h3">
-              Building the Future with Innovation and Integrity{" "}
-            </h3>
-          </div>
+          <SectionWrapper direction="up">
+            <div className="home_header">
+              <h4>PNL Constructions</h4>
+            </div>
+            <div>
+              <h3 className="home_h3">
+                Building the Future with Innovation and Integrity{" "}
+              </h3>
+            </div>
+          </SectionWrapper>
         </div>
       </section>
 
@@ -46,7 +49,9 @@ export default function Home() {
             </div>
 
             <div className="story_image">
-              <img src="/side_story.svg" alt="building" />
+              <SectionWrapper direction="zoom">
+                <img src="/side_story.svg" alt="building" />
+              </SectionWrapper>
             </div>
           </div>
         </div>
@@ -167,26 +172,36 @@ export default function Home() {
               </Link>
             </div>
             <div className="explore_image_grid">
-              <img
-                src="/work_sample1.svg"
-                alt="construction"
-                className="first_image"
-              />
-              <img
-                src="/work_sample2.svg"
-                alt="construction"
-                className="secound_image"
-              />
-              <img
-                src="/work_sample3.svg"
-                alt="construction"
-                className="third_image"
-              />
-              <img
-                src="/work_sample4.svg"
-                alt="construction"
-                className="forth_image"
-              />
+              <SectionWrapper direction="zoom">
+                <img
+                  src="/work_sample1.svg"
+                  alt="construction"
+                  className="first_image"
+                />
+              </SectionWrapper>
+              <SectionWrapper direction="zoom">
+                <img
+                  src="/work_sample2.svg"
+                  alt="construction"
+                  className="secound_image"
+                />
+              </SectionWrapper>
+
+              <SectionWrapper direction="zoom">
+                <img
+                  src="/work_sample3.svg"
+                  alt="construction"
+                  className="third_image"
+                />
+              </SectionWrapper>
+
+              <SectionWrapper direction="zoom">
+                <img
+                  src="/work_sample4.svg"
+                  alt="construction"
+                  className="forth_image"
+                />
+              </SectionWrapper>
             </div>
           </div>
         </div>
