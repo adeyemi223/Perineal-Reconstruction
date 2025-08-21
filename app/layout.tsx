@@ -44,10 +44,10 @@ export default function RootLayout({
               <div className="footer_navigation">
                 <div className="footer_page_links">
                   <Link className="footer_link" href="/about">
-                    About
+                    About PNL
                   </Link>
                   <Link className="footer_link" href="/projects">
-                    Project
+                    Projects
                   </Link>
                   <Link className="footer_link" href="/services">
                     Services
@@ -70,8 +70,8 @@ export default function RootLayout({
               </div>
               <div className="copy_right">
                 <p>
-                  &copy; All rights reserved to Perineal Reconstruction |
-                  Privacy | Terms & conditions | Licenses
+                  &copy; All rights reserved to PNL Constructions | Privacy |
+                  Terms & conditions | Licenses
                 </p>
               </div>
             </div>

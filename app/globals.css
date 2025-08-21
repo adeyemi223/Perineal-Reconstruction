@@ -718,6 +718,10 @@ select {
   padding-block: 2em;
 }
 
+.footer_logo img {
+  height: 52.52px;
+}
+
 .footer_navigation {
   display: flex;
   justify-content: space-between;
@@ -727,13 +731,13 @@ select {
 .footer_page_links {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
 }
 
 .footer_link {
   color: var(--btn-color);
   text-decoration: none;
-  font-weight: 300;
+  font-weight: lighter;
 }
 
 .footer_link:hover {
@@ -742,9 +746,17 @@ select {
 }
 
 .footer_info p,
-.footer_scocial_links p,
-.copy_right {
+.footer_scocial_links p {
   padding-bottom: 0.5em;
   color: var(--btn-color);
-  font-weight: 300;
+  font-weight: lighter;
+}
+
+.copy_right {
+  padding-top: 3em;
+  color: #ffffff;
+}
+
+.copy_right p {
+  font-weight: lighter;
 }
